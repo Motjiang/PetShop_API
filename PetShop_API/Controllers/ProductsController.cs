@@ -70,6 +70,7 @@ namespace PetShop_API.Controllers
             product.Name = request.Brand;
             product.Description = request.Title;
             product.Price = request.Price;
+            product.UpdatedAt = DateTime.Now;
 
             _context.Products.Update(product);
             await _context.SaveChangesAsync();
